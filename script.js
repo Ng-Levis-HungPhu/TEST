@@ -81,7 +81,7 @@ document.querySelector('.overlap-3').addEventListener('click', async () => {
       return;
     }
 
-    const response = await fetch("http://127.0.0.1:5000/predict", {
+    const response = await fetch("https://fern-elegant-dentist.glitch.me/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({mode, mach, aoa, ln, swept, lln})
