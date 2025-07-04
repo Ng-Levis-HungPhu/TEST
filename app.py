@@ -14,6 +14,10 @@ from sklearn.preprocessing import MinMaxScaler
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/", methods=["GET"])
+def index():
+    return "✅ Backend is live! Use POST /predict to send data."
+
 MODEL_DIR = "1. SAVING MODELS"
 
 @app.route("/predict", methods=["POST"])
