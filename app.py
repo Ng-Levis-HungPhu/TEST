@@ -24,13 +24,13 @@ MODEL_DIR = "1. SAVING MODELS"
 def predict():
     try:
         data = request.get_json()
-        mode = data.get("mode", "").strip()
-
-        mach = float(data['mach'])
-        aoa = float(data['aoa'])
-        ln = float(data['ln'])
-        swept = float(data['swept'])
-        lln = float(data['lln'])
+        
+        mode = data.get("mode")
+        mach = float(data.get("mach"))
+        aoa = float(data.get("aoa"))
+        ln = float(data.get("ln"))
+        swept = float(data.get("swept"))
+        lln = float(data.get("lln"))
 
         if mode == "NASA":
             if mach < 1.2:
