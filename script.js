@@ -84,7 +84,7 @@ document.querySelector('.overlap-3').addEventListener('click', async () => {
     console.log("Sending JSON payload:", { mode, mach, aoa, ln, swept, lln });
 
     
-    const response = await fetch("https://test-old.onrender.com/predict", {
+    const response = await fetch("https://test-old.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({mode, mach, aoa, ln, swept, lln})
