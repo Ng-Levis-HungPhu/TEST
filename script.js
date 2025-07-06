@@ -80,7 +80,10 @@ document.querySelector('.overlap-3').addEventListener('click', async () => {
       alert("Vui lòng nhập đủ cả 5 thông số!");
       return;
     }
+    
+    console.log("Sending JSON payload:", { mode, mach, aoa, ln, swept, lln });
 
+    
     const response = await fetch("https://test-old.onrender.com/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
